@@ -8,6 +8,7 @@ function Ticker() {
   const prevPrice = useRef(price);
   const canvasRef = useRef();
 
+  //console.log(prevPrice)
   useEffect(() => {
     addPoint(canvasRef.current, prevPrice.current, price);
   }, [price]);
@@ -32,6 +33,7 @@ function Ticker() {
     }
     prevPrice.current = price;
   }, [price]);
+  
 
   return (
     <div>
